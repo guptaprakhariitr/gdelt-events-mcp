@@ -44,8 +44,10 @@ export class GdeltClient {
       maxrecords: String(Math.min(opts.maxRecords ?? 25, 250)),
       timespan: opts.timespan ?? "1d",
     });
+    // GDELT rate-limits to one request per 5 seconds per IP. Cache aggressively
+    // (1 hour) so repeat queries don't hit the upstream.
     const key = `art:${stableKey(opts)}`;
-    const json: any = await this.cache.memoize(key, 60 * 15, () => this.get(`/doc/doc?${params}`));
+    const json: any = await this.cache.memoize(key, 60 * 60, () => this.get(`/doc/doc?${params}`));
     return (json?.articles ?? []).map(normalizeArticle);
   }
 
