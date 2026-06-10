@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1] — 2026-06-10 (intra-day patch)
+
+### Changed
+- Bumped article-search cache TTL from 15min → 1h to amortize across GDELT's "1 req per 5s" upstream rate limit.
+
+### Known limitation
+- GDELT throttles requests from Cloudflare Workers' shared-IP edge POPs aggressively. First-time queries (cold cache) may return a 429 surfaced as `-32603 "GDELT 429: Please limit requests…"`. The cache mitigates this for repeat queries but cold-start hits are user-visible. Mitigation: any subsequent call to the same query returns the cached result instantly; users seeing 429s should retry 5+ seconds later.
+
 ## [0.2.0] — 2026-06-10
 
 ### Changed
