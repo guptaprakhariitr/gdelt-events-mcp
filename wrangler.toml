@@ -1,0 +1,32 @@
+name = "gdelt-events-mcp"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "2cdf0e94f21c483ca3e26a9417c490cc"
+
+[[kv_namespaces]]
+binding = "USAGE"
+id = "d5d98e29e4b4406582e32e1c912ea739"
+
+[vars]
+UPGRADE_URL = "https://gdelt-events-mcp.prakhar-cognizance.workers.dev/upgrade"
+GDELT_BASE = "https://api.gdeltproject.org/api/v2"
+PRODUCT_NAME = "gdelt-events-mcp"
+DODO_PRODUCT_ID_SOLO = "pdt_0NgkRw4pjoxVq52VcsfQQ"
+DODO_PRODUCT_ID_TEAM = "pdt_0NgkRw907L2XkQNysykq7"
+DODO_PRODUCT_ID_PRO  = "pdt_0NgkRwCq5fkLyZHAGxdas"
+FROM_EMAIL = "prakshatechnologies@gmail.com"
+DODO_BASE = "https://live.dodopayments.com"
+CUSTOMER_PORTAL_RETURN_URL = "https://gdelt-events-mcp.prakhar-cognizance.workers.dev/account"
+
+# Secrets:
+#   DODO_API_KEY
+#   DODO_WEBHOOK_SECRET
+#   RESEND_API_KEY          (optional)
+#   ADMIN_TOKEN

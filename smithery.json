@@ -1,0 +1,20 @@
+{
+  "$schema": "https://smithery.ai/schema/server.json",
+  "name": "gdelt-events-mcp",
+  "displayName": "GDELT Global Events",
+  "description": "Real-time geopolitical event detection, tone timeseries, actor trends — wraps GDELT 2.0.",
+  "version": "0.2.0",
+  "license": "MIT",
+  "homepage": "https://gdelt-events-mcp.workers.dev",
+  "categories": ["news", "research", "macro"],
+  "tags": ["gdelt", "news", "sentiment", "geopolitics", "macro", "events"],
+  "transport": { "type": "http", "url": "https://gdelt-events-mcp.workers.dev/mcp" },
+  "auth": { "type": "bearer", "freeTier": { "monthlyCalls": 100, "ratePerMinute": 10 } },
+  "tools": ["gdelt_search_events", "gdelt_trending_actors", "gdelt_tone_timeseries", "gdelt_compare"],
+  "pricing": { "currency": "USD", "tiers": [
+    { "name": "Free", "price": 0,  "monthlyCalls": 100 },
+    { "name": "Solo", "price": 9,  "monthlyCalls": 2000 },
+    { "name": "Team", "price": 29, "monthlyCalls": 10000 },
+    { "name": "Pro",  "price": 79, "monthlyCalls": 50000 }
+  ] }
+}
