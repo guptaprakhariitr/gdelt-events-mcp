@@ -1,0 +1,44 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.guptaprakhariitr/gdelt-events-mcp",
+  "description": "Real-time geopolitical event detection, tone timeseries, actor trends \u2014 wraps GDELT 2.0.",
+  "status": "active",
+  "repository": {
+    "url": "https://github.com/guptaprakhariitr/gdelt-events-mcp",
+    "source": "github"
+  },
+  "version_detail": {
+    "version": "0.2.0",
+    "release_date": "2026-06-10T00:00:00Z",
+    "is_latest": true
+  },
+  "packages": [
+    {
+      "registry_name": "remote",
+      "name": "gdelt-events-mcp",
+      "version": "0.2.0",
+      "runtime_hint": "http",
+      "remote_url": "https://gdelt-events-mcp.prakhar-cognizance.workers.dev/mcp",
+      "transport_type": "http"
+    }
+  ],
+  "remotes": [
+    {
+      "transport_type": "http",
+      "url": "https://gdelt-events-mcp.prakhar-cognizance.workers.dev/mcp"
+    }
+  ],
+  "categories": [
+    "news",
+    "research",
+    "macro"
+  ],
+  "tags": [
+    "gdelt",
+    "news",
+    "sentiment",
+    "geopolitics",
+    "macro",
+    "events"
+  ]
+}
