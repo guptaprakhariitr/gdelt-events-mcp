@@ -33,7 +33,7 @@ See `src/tools.ts` for the JSON Schema input.
 {
   "mcpServers": {
     "gdelt-events-mcp": {
-      "url": "https://gdelt-events-mcp.prakhar-cognizance.workers.dev/mcp",
+      "url": "https://gdelt-events-mcp.atlasword.workers.dev/mcp",
       "headers": { "Authorization": "Bearer YOUR_API_KEY" }
     }
   }

@@ -25,7 +25,7 @@ Auto-crawls GitHub by repo topic `mcp-server`. Already tagged. Indexes within 24
 - **Display name:** `GDELT Global Events`
 - **Description:** `Real-time geopolitical event detection, tone timeseries, actor trends — wraps GDELT 2.0.`
 - **GitHub URL:** `https://github.com/guptaprakhariitr/gdelt-events-mcp`
-- **Endpoint URL:** `https://gdelt-events-mcp.prakhar-cognizance.workers.dev/mcp`
+- **Endpoint URL:** `https://gdelt-events-mcp.atlasword.workers.dev/mcp`
 - **Tags:** gdelt, news, sentiment, geopolitics, macro, events
 - **License:** MIT
 - **Transport:** HTTP (remote)
@@ -50,7 +50,7 @@ Auto-crawls GitHub by repo topic `mcp-server`. Already tagged. Indexes within 24
 ### Twitter / X thread template
 > Just shipped gdelt-events-mcp — Model Context Protocol server: real-time geopolitical event detection, tone timeseries, actor trends — wraps gdelt 2.
 >
-> Endpoint: https://gdelt-events-mcp.prakhar-cognizance.workers.dev/mcp
+> Endpoint: https://gdelt-events-mcp.atlasword.workers.dev/mcp
 > GitHub: https://github.com/guptaprakhariitr/gdelt-events-mcp
 >
 > Free tier available. Paid from $9/mo.

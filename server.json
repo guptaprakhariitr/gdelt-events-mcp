@@ -18,14 +18,14 @@
       "name": "gdelt-events-mcp",
       "version": "0.2.0",
       "runtime_hint": "http",
-      "remote_url": "https://gdelt-events-mcp.prakhar-cognizance.workers.dev/mcp",
+      "remote_url": "https://gdelt-events-mcp.atlasword.workers.dev/mcp",
       "transport_type": "http"
     }
   ],
   "remotes": [
     {
       "transport_type": "http",
-      "url": "https://gdelt-events-mcp.prakhar-cognizance.workers.dev/mcp"
+      "url": "https://gdelt-events-mcp.atlasword.workers.dev/mcp"
     }
   ],
   "categories": [
