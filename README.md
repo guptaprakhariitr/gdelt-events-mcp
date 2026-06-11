@@ -204,10 +204,10 @@ MIT — see [LICENSE](LICENSE).
 
 ## Install via npm (one-liner)
 
-A thin launcher is published as [`@atlasword/gdelt-events-mcp`](https://www.npmjs.com/package/@atlasword/gdelt-events-mcp) on npm. No manual URL to copy/paste:
+A thin launcher is published as [`@insnapsprakhar/gdelt-events-mcp`](https://www.npmjs.com/package/@insnapsprakhar/gdelt-events-mcp) on npm. No manual URL to copy/paste:
 
 ```bash
-npx -y @atlasword/gdelt-events-mcp
+npx -y @insnapsprakhar/gdelt-events-mcp
 ```
 
 Or wire it into your MCP client:
@@ -217,7 +217,7 @@ Or wire it into your MCP client:
   "mcpServers": {
     "gdelt-events": {
       "command": "npx",
-      "args": ["-y", "@atlasword/gdelt-events-mcp"]
+      "args": ["-y", "@insnapsprakhar/gdelt-events-mcp"]
     }
   }
 }
