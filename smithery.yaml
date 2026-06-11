@@ -1,0 +1,66 @@
+# Smithery registry config — https://smithery.ai/docs/build/project-config/smithery-yaml
+# This is an HTTP-transport MCP server; Smithery hosts the listing and proxies
+# clients straight to our Cloudflare Workers endpoint.
+
+name: gdelt-events-mcp
+displayName: GDELT Global Events
+description: |
+  Real-time geopolitical event detection, tone timeseries, actor trends — wraps GDELT 2.0.
+homepage: https://gdelt-events-mcp.atlasword.workers.dev
+repository: https://github.com/guptaprakhariitr/gdelt-events-mcp
+license: MIT
+version: "0.2.0"
+
+runtime: container
+
+startCommand:
+  type: http
+  url: https://gdelt-events-mcp.atlasword.workers.dev/mcp
+  configSchema:
+    type: object
+    properties:
+      apiKey:
+        type: string
+        title: API key (optional)
+        description: |
+          Bearer token from https://gdelt-events-mcp.atlasword.workers.dev/upgrade.
+          Leave blank for the anonymous free tier (~100 calls/month/IP).
+    required: []
+  exampleConfig:
+    apiKey: ""
+  commandFunction: |-
+    (config) => ({
+      type: "http",
+      url: "https://gdelt-events-mcp.atlasword.workers.dev/mcp",
+      headers: config.apiKey ? { Authorization: `Bearer ${config.apiKey}` } : {}
+    })
+
+remote:
+  type: http
+  url: https://gdelt-events-mcp.atlasword.workers.dev/mcp
+
+categories:
+  - news
+  - research
+  - macro
+tags:
+  - gdelt
+  - news
+  - sentiment
+  - geopolitics
+  - macro
+  - events
+
+tools:
+  - name: gdelt_search_events
+  - name: gdelt_trending_actors
+  - name: gdelt_tone_timeseries
+  - name: gdelt_compare
+
+auth:
+  type: bearer
+  required: false
+  description: |
+    Optional. Anonymous free tier works for ~100 calls/month per IP. For higher
+    quotas, grab a key from https://gdelt-events-mcp.atlasword.workers.dev/upgrade and pass
+    it as `Authorization: Bearer <key>`.
