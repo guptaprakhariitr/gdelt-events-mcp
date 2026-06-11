@@ -3,7 +3,7 @@
   "name": "io.github.guptaprakhariitr/gdelt-events-mcp",
   "title": "GDELT Global Events",
   "description": "Geopolitical event detection, tone timeseries, actor trends from GDELT 2.0.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "websiteUrl": "https://gdelt-events-mcp.atlasword.workers.dev/",
   "repository": {
     "url": "https://github.com/guptaprakhariitr/gdelt-events-mcp",
@@ -13,16 +13,6 @@
     {
       "type": "streamable-http",
       "url": "https://gdelt-events-mcp.atlasword.workers.dev/mcp"
-    }
-  ],
-  "packages": [
-    {
-      "registryType": "npm",
-      "identifier": "@insnapsprakhar/gdelt-events-mcp",
-      "version": "0.2.0",
-      "transport": {
-        "type": "stdio"
-      }
     }
   ]
 }
